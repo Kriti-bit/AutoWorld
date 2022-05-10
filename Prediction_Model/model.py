@@ -2,7 +2,7 @@ from sklearn import linear_model
 import pandas as pd
 import pickle
 
-df = pd.read_csv('prices.csv')
+df = pd.read_csv('cleaned_automobile_data.csv')
 
 y = df['Value']  # dependent variable
 X = df[['Rooms', 'Distance']]  # independent variable
