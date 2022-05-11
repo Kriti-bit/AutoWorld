@@ -24,12 +24,11 @@ def tryPredict():
 
 @app.route("/predict",  methods=['POST'])
 def predict():
-    # if request.method == 'POST':
-    rooms = request.form['rooms']
-    distance = request.form['distance']
-    prediction = model.predict([[rooms, distance]])
+    doors = request.form['num-of-doors']
+    horsepower = request.form['horsepower']
+    prediction = model.predict([[doors, horsepower]])
     output = round(prediction[0], 2)
-    return render_template('predictions.html', prediction_text=f'A house with {rooms} rooms per dwelling and located {distance} km to employment centers has a value of ${output}K')
+    return render_template('predictions.html', prediction_text=f'Doors= {doors} and horsepower= {horsepower} means ${output}K')
 
 
 if __name__ == "__main__":
