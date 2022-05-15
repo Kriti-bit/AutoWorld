@@ -29,7 +29,7 @@ def predict():
     horsepower = request.form['horsepower']
     prediction = model.predict([[engine_size, horsepower]])
     output = round(prediction[0], 2)
-    return render_template('predictions.html', prediction_text=f'For an engine size = {engine_size} and horsepower= {horsepower} price can be estimated as ${output}K')
+    return render_template('predictions_HP_EngineSize.html', prediction_text=f'For an engine size = {engine_size} and horsepower= {horsepower} price can be estimated as ${output}K')
 
 
 if __name__ == "__main__":
