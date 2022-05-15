@@ -21,12 +21,12 @@ def hello1():
 
 
 @app.route("/tryPredict_HP_EngineSize")
-def tryPredict_HP_EngineSize():
+def tryPredict():
     return render_template('tryPredict_HP_EngineSize.html')
 
 
 @app.route("/predict",  methods=['POST'])
-def predict_HP_EngineSize():
+def predict():
     engine_size = request.form['engine-size']
     horsepower = request.form['horsepower']
     prediction = model_HP_EngineSize.predict([[engine_size, horsepower]])
