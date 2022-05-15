@@ -20,16 +20,16 @@ def hello1():
 
 @app.route("/tryPredict")
 def tryPredict():
-    return render_template('tryPredict.html')
+    return render_template('tryPredict_HP_EngineSize.html')
 
 
 @app.route("/predict",  methods=['POST'])
 def predict():
-    doors = request.form['num-of-doors']
+    engine_size = request.form['engine-size']
     horsepower = request.form['horsepower']
-    prediction = model.predict([[doors, horsepower]])
+    prediction = model.predict([[engine_size, horsepower]])
     output = round(prediction[0], 2)
-    return render_template('predictions.html', prediction_text=f'Doors= {doors} and horsepower= {horsepower} means ${output}K')
+    return render_template('predictions.html', prediction_text=f'For an engine size = {engine_size} and horsepower= {horsepower} price can be estimated as ${output}K')
 
 
 if __name__ == "__main__":

@@ -55,7 +55,7 @@
                     <a href="#">Predict Price</a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
-                        <li><a href="tryPredict">From Cylinders</a></li>
+                        <li><a href="tryPredict_HP_EngineSize">From Engine Size and Horse Power</a></li>
                         <li><a href="#">Plugins</a></li>
                         <li><a href="#">Tutorials</a></li>
                     </ul> 
@@ -97,8 +97,8 @@
 		<h2>Price Prediction</h2>
 			<p>Introduce the number of rooms and distance:</p>
 			<form action="{{url_for('predict')}}" method="post">
-				<input type="text" name="num-of-doors" placeholder="num-of-doors" required="required">
-				<input type="text" name="horsepower" placeholder="horsepower" required="required">
+				<input type="text" name="engine-size" placeholder="Engine Size" required="required">
+				<input type="text" name="horsepower" placeholder="Horse Power" required="required">
 				<button type="submit" class="btn btn-primary btn-block btn-large"> Predict Value!</button>
 			</form>
 			<br>
