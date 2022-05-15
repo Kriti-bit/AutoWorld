@@ -5,11 +5,12 @@ import pickle
 df = pd.read_csv('cleaned_automobile_data.csv')
 
 y = df['price']  # dependent variable
-X = df[['num-of-doors', 'horsepower']]  # independent variable
+X = df[['engine-size', 'horsepower']]  # independent variable
 
 lm = linear_model.LinearRegression()
 lm.fit(X, y)  # fitting the model
-pickle.dump(lm, open('auto_price_model.pkl', 'wb'))  # save the model
+# save the model
+pickle.dump(lm, open('model_price_from_engine_size_horsepower.pkl', 'wb'))
 
 print(lm.predict([[15, 61]]))  # format of input
 print(f'score: {lm.score(X, y)}')

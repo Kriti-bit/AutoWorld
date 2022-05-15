@@ -4,7 +4,8 @@ from flask import Flask, render_template, request, url_for
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(
+    open('./Prediction_Model/model_price_from_engine_size_horsepower.pkl', 'rb'))
 
 
 @app.route("/")
