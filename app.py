@@ -18,7 +18,7 @@ def hello1():
     return render_template('index.html')
 
 
-@app.route("/tryPredict")
+@app.route("/tryPredict_HP_EngineSize")
 def tryPredict():
     return render_template('tryPredict_HP_EngineSize.html')
 
