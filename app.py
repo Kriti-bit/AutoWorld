@@ -16,8 +16,8 @@ def hello():
 
 
 @app.route("/analysis")
-def hello1():
-    return render_template('index.html')
+def analysis():
+    return render_template('automobile-data-cleaning.html')
 
 
 @app.route("/tryPredict_HP_EngineSize")
