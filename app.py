@@ -8,6 +8,8 @@ model_HP_EngineSize = pickle.load(
     open('./Prediction_Model/model_price_from_engine_size_horsepower.pkl', 'rb'))
 model_HP = pickle.load(
     open('./Prediction_Model/model_price_from_horsepower.pkl', 'rb'))
+model_highwaympg = pickle.load(
+    open('./Prediction_Model/model_price_from_highwaympg.pkl', 'rb'))
 
 
 @app.route("/")
@@ -45,6 +47,19 @@ def predict_HP():
     prediction = model_HP.predict([[horsepower]])
     output = round(prediction[0], 2)
     return render_template('predictions_HP.html', prediction_text=f'For a horsepower = {horsepower} price can be estimated as ${output}K')
+
+
+@app.route("/tryPredict_highwaympg")
+def tryPredict_highwaympg():
+    return render_template('tryPredict_highwaympg.html')
+
+
+@app.route("/predict_highwaympg",  methods=['POST'])
+def predict_highwaympg():
+    horsepower = request.form['horsepower']
+    prediction = model_highwaympg.predict([[horsepower]])
+    output = round(prediction[0], 2)
+    return render_template('predictions_highwaympg.html', prediction_text=f'For a horsepower = {horsepower} price can be estimated as ${output}K')
 
 
 if __name__ == "__main__":
