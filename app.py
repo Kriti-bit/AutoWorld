@@ -56,10 +56,10 @@ def tryPredict_highwaympg():
 
 @app.route("/predict_highwaympg",  methods=['POST'])
 def predict_highwaympg():
-    horsepower = request.form['horsepower']
-    prediction = model_highwaympg.predict([[horsepower]])
+    highway_mpg = request.form['highway-mpg']
+    prediction = model_highwaympg.predict([[highway_mpg]])
     output = round(prediction[0], 2)
-    return render_template('predictions_highwaympg.html', prediction_text=f'For a horsepower = {horsepower} price can be estimated as ${output}K')
+    return render_template('predictions_highwaympg.html', prediction_text=f'For a Highway MPG = {highway_mpg} price can be estimated as ${output}K')
 
 
 if __name__ == "__main__":
