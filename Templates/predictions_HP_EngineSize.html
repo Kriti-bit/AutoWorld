@@ -93,8 +93,16 @@
         </nav>
 </head>
 <body>
-	<div class="login">
-		<h2>Price Prediction</h2>
+	<h4>Price Prediction</h4>
+	<div class="login" style = "
+		position: absolute;
+		top: 30%;
+		left: 0;
+		right: 0;
+		text-align: center;
+		margin: auto;
+	">
+		
 		<p>Introduce the Engine Size and Horsepower:</p>
 			<form action="{{url_for('predict')}}" method="post">
 				<input type="text" name="engine-size" placeholder="Engine Size" required="required">
