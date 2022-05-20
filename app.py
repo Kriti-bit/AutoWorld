@@ -1,5 +1,6 @@
 # https://github.com/ifrankandrade/ml-web-app/blob/main/deploy-lr-project/app.py
 # https://towardsdatascience.com/how-to-easily-build-your-first-machine-learning-web-app-in-python-c3d6c0f0a01c#e0d6
+from turtle import width
 from flask import Flask, render_template, request, url_for
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -13,6 +14,8 @@ model_HP = pickle.load(
     open('./Prediction_Model/model_price_from_horsepower.pkl', 'rb'))
 model_highwaympg = pickle.load(
     open('./Prediction_Model/model_price_from_highwaympg.pkl', 'rb'))
+model_weight_from_lbh = pickle.load(
+    open('./Prediction_Model/model_weight_from_lbh.pkl', 'rb'))
 
 
 @app.route("/")
@@ -66,6 +69,21 @@ def predict_highwaympg():
     prediction = model_highwaympg.predict(poly_features)
     output = round(prediction[0], 2)
     return render_template('predictions_highwaympg.html', prediction_text=f'For a Highway MPG = {highway_mpg} price can be estimated as ${output}')
+
+
+@app.route("/tryPredict_weight_from_lbh")
+def tryPredict_weight_from_lbh():
+    return render_template('tryPredict_weight_from_lbh.html')
+
+
+@app.route("/predict_weight_from_lbh",  methods=['POST'])
+def predict_weight_from_lbh():
+    height = request.form['height']
+    width = request.form['width']
+    length = request.form['length']
+    prediction = model_weight_from_lbh.predict([[height, width, length]])
+    output = round(prediction[0], 2)
+    return render_template('predictions_weight_from_lbh.html', prediction_text=f'For height = {height}, length = {length} and width = {width} price can be estimated as ${output}')
 
 
 if __name__ == "__main__":
