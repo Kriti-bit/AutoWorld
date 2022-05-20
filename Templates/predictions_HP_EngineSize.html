@@ -96,14 +96,14 @@
 	<h4>Price Prediction</h4>
 	<div class="login" style = "
 		position: absolute;
-		top: 30%;
+		top: 12%;
 		left: 0;
 		right: 0;
 		text-align: center;
 		margin: auto;
 	">
 		
-		<p>Introduce the Engine Size and Horsepower:</p>
+		<!-- <p>Introduce the Engine Size and Horsepower:</p> -->
 			<form action="{{url_for('predict')}}" method="post">
 				<input type="text" name="engine-size" placeholder="Engine Size" required="required">
 				<input type="text" name="horsepower" placeholder="Horse Power" required="required">
@@ -112,6 +112,13 @@
 			<br>
 			<br>	
 	    <b>{{prediction_text}}</b>
+		<br>
+		<img src="../static/price_engineSize.jpg" style="
+			width: 40%;
+			height: auto;
+			display: block;
+			margin: auto;
+		">
 	</div>
 </body>
 </html>
