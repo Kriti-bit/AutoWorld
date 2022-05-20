@@ -43,6 +43,7 @@ h1 {
 	font-family: 'Bree Serif', 'serif';
 	}
 
+
 #container {
 	margin: 0 auto;
 	max-width: 890px;
@@ -62,6 +63,7 @@ nav {
 	margin:0;
 	padding: 0;
 	background-color: #254441;
+	z-index:30;
 }
 
 #logo {
@@ -79,6 +81,7 @@ nav:after {
 	content:"";
 	display:table;
 	clear:both;
+	z-index:30;
 }
 
 /* Removing padding, margin and "list-style" from the "ul",
@@ -89,6 +92,7 @@ nav ul {
 	margin:0;
 	list-style: none;
 	position: relative;
+	z-index:30;
 	}
 	
 /* Positioning the navigation items inline */
@@ -97,6 +101,7 @@ nav ul li {
 	display:inline-block;
 	float: left;
 	background-color: #254441;
+	z-index:30;
 	}
 
 /* Styling the links */
@@ -106,6 +111,7 @@ nav a {
 	color:#FFF;
 	font-size:17px;
 	text-decoration:none;
+	z-index:30;
 }
 
 
@@ -123,11 +129,13 @@ nav ul ul {
 	position: absolute; 
 	/* has to be the same number as the "line-height" of "nav a" */
 	top: 60px; 
+	z-index:30;
 }
 	
 /* Display Dropdowns on Hover */
 nav ul li:hover > ul {
 	display:inherit;
+	z-index:30;
 }
 	
 /* Fisrt Tier Dropdown */
@@ -136,6 +144,7 @@ nav ul ul li {
 	float:none;
 	display:list-item;
 	position: relative;
+	z-index:30;
 }
 
 /* Second, Third and more Tiers	
@@ -147,6 +156,7 @@ nav ul ul ul li {
 	top:-60px;
 	/* has to be the same number as the "width" of "nav ul ul li" */ 
 	left:170px; 
+	z-index:30;
 }
 
 	
@@ -170,6 +180,7 @@ li > a:only-child:after { content: ''; }
 
 	nav {
 		margin: 0;
+		z-index:30;
 	}
 
 	/* Hide the navigation menu by default */
@@ -203,15 +214,18 @@ li > a:only-child:after { content: ''; }
 	nav ul li {
 		display: block;
 		width: 100%;
+		z-index:30;
 		}
 
 	nav ul ul .toggle,
 	nav ul ul a {
 		padding: 0 40px;
+		z-index:30;
 	}
 
 	nav ul ul ul a {
 		padding: 0 80px;
+		z-index:30;
 	}
 
 	nav a:hover,
@@ -238,6 +252,7 @@ li > a:only-child:after { content: ''; }
 		float: none;
 		position:static;
 		color: #ffffff;
+		z-index:30;
 		/* has to be the same number as the "line-height" of "nav a" */
 	}
 		
@@ -245,16 +260,19 @@ li > a:only-child:after { content: ''; }
 	nav ul ul li:hover > ul,
 	nav ul li:hover > ul {
 		display: none;
+		z-index:30;
 	}
 		
 	/* Fisrt Tier Dropdown */
 	nav ul ul li {
 		display: block;
 		width: 100%;
+		z-index:30;
 	}
 
 	nav ul ul ul li {
 		position: static;
+		z-index:30;
 		/* has to be the same number as the "width" of "nav ul ul li" */ 
 
 	}
