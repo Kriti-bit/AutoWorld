@@ -8,7 +8,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-        
+     
 	<nav>
         <div id="logo">AutoWorld</div>
 
@@ -60,31 +60,37 @@
         </nav>
 </head>
 <body>
-	<h4>Price Prediction</h4>
+	<h4>Weight Prediction</h4>
 	<div class="login" style = "
 		position: absolute;
-		top: 12%;
+		top: 18%;
 		left: 0;
 		right: 0;
 		text-align: center;
 		margin: auto;
 	">
 		
-		<!-- <p>Introduce the Engine Size and Horsepower:</p> -->
-			<form action="{{url_for('predict')}}" method="post">
+			<form action="{{url_for('predict_weight_cityMPG_engineSize')}}" method="post">
 				<input type="text" name="engine-size" placeholder="Engine Size" required="required">
-				<input type="text" name="horsepower" placeholder="Horse Power" required="required">
+				<input type="text" name="city-mpg" placeholder="City MPG" required="required">
 				<button type="submit" class="btn btn-primary btn-block btn-large"> Predict Value!</button>
 			</form>
-			<br>	
+			<br>
 	    <b>{{prediction_text}}</b>
 		<br>
-		<img src="../static/price_engineSize.jpg" style="
+		<br>
+		<img src="../static/weight_cityMPG.jpg" style="
 			width: 40%;
 			height: auto;
-			display: block;
+			/* display: block; */
 			margin: auto;
 		">
+		<img src="../static/weight_engineSize.jpg" style="
+		width: 40%;
+		height: auto;
+		/* display: block; */
+		margin: auto;
+	">
 	</div>
 </body>
 </html>

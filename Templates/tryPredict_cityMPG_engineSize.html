@@ -8,40 +8,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-	<!-- Navbar -->
-	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <div class="container-fluid">
-	    <a class="navbar-brand" href="#">Navbar</a>
-	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"></span>
-	    </button>
-	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item">
-	          <a class="nav-link active" aria-current="page" href="#">Home</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="tryPredict">Predict</a>
-	        </li>
-	        <li class="nav-item dropdown">
-	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	            Dropdown
-	          </a>
-	          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-	            <li><a class="dropdown-item" href="predict">Action</a></li>
-	            <li><a class="dropdown-item" href="cbd">Another action</a></li>
-	            <li><hr class="dropdown-divider"></li>
-	            <li><a class="dropdown-item" href="dha">Something else here</a></li>
-	          </ul>
-	        </li>
-	      </ul>
-	      <form class="d-flex">
-	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-	        <button class="btn btn-outline-success" type="submit">Search</button>
-	      </form>
-	    </div>
-	  </div>
-	</nav>                  -->
+     
 	<nav>
         <div id="logo">AutoWorld</div>
 
@@ -93,7 +60,7 @@
         </nav>
 </head>
 <body>
-	<h4>Price Prediction</h4>
+	<h4>Weight Prediction</h4>
 	<div class="login" style = "
 		position: absolute;
 		top: 30%;
@@ -102,10 +69,10 @@
 		text-align: center;
 		margin: auto;
 	">
-			<!-- <p>Introduce the Engine Size and Horsepower:</p> -->
-			<form action="{{url_for('predict')}}" method="post">
+		
+			<form action="{{url_for('predict_weight_cityMPG_engineSize')}}" method="post">
 				<input type="text" name="engine-size" placeholder="Engine Size" required="required">
-				<input type="text" name="horsepower" placeholder="Horse Power" required="required">
+				<input type="text" name="city-mpg" placeholder="City MPG" required="required">
 				<button type="submit" class="btn btn-primary btn-block btn-large"> Predict Value!</button>
 			</form>
 			<br>
