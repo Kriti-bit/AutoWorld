@@ -30,15 +30,15 @@
 	  text-decoration: none;
 	  font-family: "Poppins", sans-serif;
 	  line-height: 32px;
-	  list-style-type: none;
-	  box-sizing: border-box;
+	  /* list-style-type: none;
+	  box-sizing: border-box; */
 	}
 	body {
 	  background-color: var(--bg);
 	  overflow-x: hidden;
 	  margin: 0;
 	padding: 0;
-	word-wrap:break-word !important;
+	/* word-wrap:break-word !important; */
 	}
 	img {
 	  width: 100%;
@@ -358,7 +358,7 @@ li > a:only-child:after { content: ''; }
 	left: 40%;
 	max-width: 70%;
 	position: absolute;
-	top: 15%;
+	top: 30%;
 	transform: translate(-50%, -50%);
 	width: 450px;
 }
@@ -684,3 +684,41 @@ li > a:only-child:after { content: ''; }
   } */
 
 
+  .graph-content {
+	border-radius: 15px;
+	box-shadow: var(--shadow);
+	padding: 1rem;
+	background-color: #fff;
+  }
+  .graph-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  .icon-wrapper {
+	display: flex;
+	align-items: center;
+  }
+  .icon {
+	height: 40px;
+	width: 40px;
+	border-radius: 7px;
+	background-color: #eee;
+	display: grid;
+	place-items: center;
+	font-size: 1.2rem;
+	margin-right: 0.8rem;
+  }
+  .graph-head select {
+	outline: none;
+	background-color: #eee;
+	height: 35px;
+	border-radius: 10px;
+	padding: 0.5rem 1rem;
+	border: none;
+  }
+  .overlay label {
+	display: block;
+	height: 100%;
+	width: 100%;
+  }
