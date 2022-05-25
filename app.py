@@ -23,15 +23,13 @@ model_weight_from_lbh_enginesize_HP = pickle.load(
 model_city_mpg = pickle.load(
     open('./Prediction_Model/model_city_mpg.pkl', 'rb'))
 
+model_city_mpg_enigne_hp_wieght = pickle.load(
+    open('./Prediction_Model/predict_city_mpg_enigne_hp_wieght.pkl', 'rb'))
+
 
 @app.route("/")
 def hello():
     return render_template('index.html')
-
-
-@app.route("/analysis")
-def analysis():
-    return render_template('automobile-data-cleaning.html')
 
 
 @app.route("/tryPredict_HP_EngineSize")
@@ -135,6 +133,24 @@ def predict_city_mpg():
     prediction = model_city_mpg.predict([[horsepower]])
     output = round(prediction[0], 2)
     return render_template('predictions_city_mpg.html', prediction_text=f'For a horsepower = {horsepower} City MPG can be estimated as {output}')
+
+# tryPredict_city_mpg_enigne_hp_wieght
+
+
+@app.route("/tryPredict_city_mpg_enigne_hp_wieght")
+def tryPredict_city_mpg_enigne_hp_wieght():
+    return render_template('tryPredict_city_mpg_enigne_hp_wieght.html')
+
+
+@app.route("/predict_city_mpg_enigne_hp_wieght",  methods=['POST'])
+def predict_city_mpg_enigne_hp_wieght():
+    weight = request.form['weight']
+    engine_size = request.form['engine-size']
+    horsepower = request.form['horsepower']
+    prediction = model_city_mpg_enigne_hp_wieght.predict(
+        [[weight, engine_size, horsepower]])
+    output = round(prediction[0], 2)
+    return render_template('predict_city_mpg_enigne_hp_wieght.html', prediction_text=f'For weight = {weight}, engine size = {engine_size} and horsepower = {horsepower}  City MPG can be estimated as {output}')
 
 
 if __name__ == "__main__":
