@@ -20,6 +20,8 @@ model_weight_cityMPG_engineSize = pickle.load(
     open('./Prediction_Model/model_weight_cityMPG_engineSize.pkl', 'rb'))
 model_weight_from_lbh_enginesize_HP = pickle.load(
     open('./Prediction_Model/model_weight_from_lbh_enginesize_HP.pkl', 'rb'))
+model_city_mpg = pickle.load(
+    open('./Prediction_Model/model_city_mpg.pkl', 'rb'))
 
 
 @app.route("/")
@@ -120,6 +122,19 @@ def predict_weight_from_lbh_enginesize_HP():
         [[height, width, length, engine_size, horsepower]])
     output = round(prediction[0], 2)
     return render_template('predictions_weight_from_lbh_enginesize_HP.html', prediction_text=f'For height = {height}, length = {length}, width = {width}, engine size = {engine_size} and horsepower = {horsepower}  price can be estimated as ${output}')
+
+
+@app.route("/tryPredict_city_mpg")
+def tryPredict_city_mpg():
+    return render_template('tryPredict_city_mpg.html')
+
+
+@app.route("/predict_city_mpg",  methods=['POST'])
+def predict_city_mpg():
+    horsepower = request.form['horsepower']
+    prediction = model_city_mpg.predict([[horsepower]])
+    output = round(prediction[0], 2)
+    return render_template('predictions_city_mpg.html', prediction_text=f'For a horsepower = {horsepower} City MPG can be estimated as {output}')
 
 
 if __name__ == "__main__":
