@@ -234,7 +234,7 @@ li > a:only-child:after { content: ''; }
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width : 768px) {
+@media all and (max-width : 1000px) {
 
 	#logo {
 		display: block;
@@ -677,48 +677,8 @@ li > a:only-child:after { content: ''; }
 	margin-bottom: 1rem;
   }
 
-  /* .block-grid {
+   .block-grid {
 	display: grid;
 	grid-gap: 3rem;
 	grid-template-columns: 30% auto;
-  } */
-
-
-  .graph-content {
-	border-radius: 15px;
-	box-shadow: var(--shadow);
-	padding: 1rem;
-	background-color: #fff;
-  }
-  .graph-head {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-  }
-  .icon-wrapper {
-	display: flex;
-	align-items: center;
-  }
-  .icon {
-	height: 40px;
-	width: 40px;
-	border-radius: 7px;
-	background-color: #eee;
-	display: grid;
-	place-items: center;
-	font-size: 1.2rem;
-	margin-right: 0.8rem;
-  }
-  .graph-head select {
-	outline: none;
-	background-color: #eee;
-	height: 35px;
-	border-radius: 10px;
-	padding: 0.5rem 1rem;
-	border: none;
-  }
-  .overlay label {
-	display: block;
-	height: 100%;
-	width: 100%;
-  }
+  } 
