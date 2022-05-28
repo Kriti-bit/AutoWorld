@@ -28,7 +28,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd EDA
+  cd AutoWorld
 ```
 
 Start the server
