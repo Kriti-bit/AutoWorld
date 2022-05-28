@@ -22,7 +22,7 @@ The user can make predictions about the price, mileage, etc. just with one click
 Clone the project
 
 ```bash
-  git clone https://github.com/Kriti-bit/EDA/
+  git clone https://github.com/Kriti-bit/AutoWorld.git
 ```
 
 Go to the project directory
