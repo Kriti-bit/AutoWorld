@@ -4,7 +4,7 @@ A one-stop destination everything Auto!
 
 AutoWorld is a web based application which aims at helping users and industrialists visualise and understand data through predictions and graphs.
 
-the user can make predictions about the price, mileage, etc. just with one click and visualise the data.
+The user can make predictions about the price, mileage, etc. just with one click and visualise the data. They can enter the known information and make predictions about the price, mileage, etc. of an automobile.
 
 ## Tech Stack 💻
 
