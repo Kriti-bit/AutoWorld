@@ -1,6 +1,6 @@
 # AutoWorld 🚗
 
-A one-stop destination everything Auto!
+A one-stop destination for everything Auto!
 
 AutoWorld is a web based application which aims at helping users and industrialists visualise and understand data through predictions and graphs.
 
@@ -14,8 +14,8 @@ The user can make predictions about the price, mileage, etc. just with one click
 
 ## Data Cleaning and Analysis ✨
 
-1. <a href="https://www.kaggle.com/code/kriti7/automobile-data-cleaning/notebook" target="_blank">Data Cleaning</a>
-2. <a href="https://www.kaggle.com/code/kriti7/automobile-data-analysis/notebook" target="_blank">Data Analysis</a>
+1. <a target="_blank" href="https://www.kaggle.com/code/kriti7/automobile-data-cleaning/notebook">Data Cleaning</a>
+2. <a target="_blank" href="https://www.kaggle.com/code/kriti7/automobile-data-analysis/notebook">Data Analysis</a>
 
 ## Run Locally 🧪
 
