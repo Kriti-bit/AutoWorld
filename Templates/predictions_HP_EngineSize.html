@@ -69,7 +69,7 @@
 		text-align: center;
 		margin: auto;
 	">
-		
+		<br>
 		<!-- <p>Introduce the Engine Size and Horsepower:</p> -->
 			<form action="{{url_for('predict')}}" method="post">
 				<input type="text" name="engine-size" placeholder="Engine Size" required="required">
@@ -78,6 +78,7 @@
 			</form>
 			<br>	
 	    <b>{{prediction_text}}</b>
+		<br>
 		<br>
 		<img src="../static/price_engineSize.jpg" style="
 			width: 40%;
