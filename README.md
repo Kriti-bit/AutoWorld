@@ -37,6 +37,20 @@ Start the server
   python app.py
 ```
 
+## Screenshots 📷
+
+<img src="./static/screenshots/homepage.jpg"/>
+<br>
+<img src="./static/screenshots/prediction1.jpg"/>
+<br>
+<img src="./static/screenshots/prediction2.jpg"/>
+<br>
+<img src="./static/screenshots/prediction3.jpg"/>
+<br>
+<img src="./static/screenshots/prediction4.jpg"/>
+
+<br>
+
 ## My Learnings 📝
 
 Building this project in such a short span of time, along with End Semester Exams certainly wasn't easy, but it taught me so much that it was worth every effort!
