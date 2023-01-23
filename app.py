@@ -1,4 +1,3 @@
-from turtle import width
 from flask import Flask, render_template, request, url_for
 import numpy as np
 from sklearn.linear_model import LinearRegression
