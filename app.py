@@ -1,5 +1,3 @@
-# https://github.com/ifrankandrade/ml-web-app/blob/main/deploy-lr-project/app.py
-# https://towardsdatascience.com/how-to-easily-build-your-first-machine-learning-web-app-in-python-c3d6c0f0a01c#e0d6
 from turtle import width
 from flask import Flask, render_template, request, url_for
 import numpy as np
