@@ -26,7 +26,7 @@ model_city_mpg_enigne_hp_wieght = pickle.load(
 
 @app.route("/")
 def hello():
-    return render_template('./templates/index.html')
+    return render_template('index.html')
 
 
 @app.route("/tryPredict_HP_EngineSize")
