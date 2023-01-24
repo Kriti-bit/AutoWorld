@@ -131,8 +131,6 @@ def predict_city_mpg():
     output = round(prediction[0], 2)
     return render_template('predictions_city_mpg.html', prediction_text=f'For a horsepower = {horsepower} City MPG can be estimated as {output}')
 
-# tryPredict_city_mpg_enigne_hp_wieght
-
 
 @app.route("/tryPredict_city_mpg_enigne_hp_wieght")
 def tryPredict_city_mpg_enigne_hp_wieght():
