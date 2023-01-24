@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import pickle
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='Templates')
 model_HP_EngineSize = pickle.load(
     open('./Prediction_Model/model_price_from_engine_size_horsepower.pkl', 'rb'))
 model_HP = pickle.load(
